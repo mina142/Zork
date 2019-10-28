@@ -2,8 +2,6 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-import static javafx.application.Platform.exit;
-
 public class Main {
     public static int roomCounter = 0;
     public static Scanner keyboard = new Scanner(System.in);
@@ -30,8 +28,6 @@ public class Main {
             }
         }
     }
-
-
 
     public static void main(String[] args) {
         process();
@@ -139,7 +135,6 @@ public class Main {
 
     public static int library(String direction) {
         int room = 3;
-        //roomCounter ++;
         mapOfRooms.put("library",true);
 
         System.out.println("You entered library room, its scary and there are lots of spiders in it!!");
@@ -328,7 +323,7 @@ public class Main {
         counter();
         System.out.println("You ran out of the creepy house with your tail " +
                 "between your legs what a loser lol");
-        System.out.println("Total number of rooms you visisted: " + roomCounter);
+        System.out.println("Total number of rooms you visited: " + roomCounter);
         if (random <= 25) {
             System.out.println("A ghost followed you! yikes");
         }
