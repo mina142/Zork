@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,6 +12,25 @@ public class Main {
     static boolean secret;
 
     static int randomize;
+    public static HashMap<String, Boolean> mapOfRooms = new HashMap<String, Boolean>(){{
+        put("foyer",false);
+        put("frontRoom",false);
+        put("library",false);
+        put("kitchen",false);
+        put("diningRoom",false);
+        put("vault",false);
+        put("parlor",false);
+        put("secretRoom",false);
+    }};
+    public static void counter(){
+        for(String roomname: mapOfRooms.keySet()){
+            boolean val = mapOfRooms.get(roomname);
+            if (val==true){
+                roomCounter ++;
+            }
+        }
+    }
+
 
 
     public static void main(String[] args) {
@@ -60,7 +80,8 @@ public class Main {
     // case 1
     public static int foyer(String direction){
         int room = 1;
-        roomCounter ++;
+
+        mapOfRooms.put("foyer",true);
 
         System.out.println("You entered the Foyer, looking around you see a dead scorpion (ew gross)");
         System.out.println("There is a door ahead, type north to proceed.");
@@ -84,7 +105,8 @@ public class Main {
 
     public static int frontRoom(String direction){
         int room = 2;
-        roomCounter ++;
+        mapOfRooms.put("frontRoom",true);
+
 
         System.out.println("You've entered the front room, its big or whatever and there is a piano! cool!");
         System.out.println("Looking around there seems to be a few options, you can either east, west, " +
@@ -116,7 +138,8 @@ public class Main {
 
     public static int library(String direction) {
         int room = 3;
-        roomCounter ++;
+        //roomCounter ++;
+        mapOfRooms.put("library",true);
 
         System.out.println("You entered library room, its scary and there are lots of spiders in it!!");
         System.out.println("Looking around there seems to be a few options, you can go to north, " +
@@ -143,7 +166,7 @@ public class Main {
 
     public static int kitchen(String direction) {
         int room = 4;
-        roomCounter ++;
+        mapOfRooms.put("kitchen",true);
 
         System.out.println("You entered kitchen room, its scary and there are lots of bats in it!!");
         System.out.println("Looking around there seems to be a few options, you can go to north, " +
@@ -170,7 +193,7 @@ public class Main {
 
     public static int diningRoom(String direction) {
         int room = 5;
-        roomCounter ++;
+        mapOfRooms.put("diningRoom",true);
 
         System.out.println("You entered Dining Room, its scary and there are lots of dust and empty boxes!!");
         System.out.println("Looking around there seems to be a few options, you can go to south. ");
@@ -193,7 +216,7 @@ public class Main {
     public static int vault(String direction) {
         int room = 6;
         int random = chance(1, 100);
-        roomCounter++;
+        mapOfRooms.put("vault",true);
 
         System.out.println("You found the vault! There are three skeletons yikeS!");
         System.out.println("There doesn't seem to be much else in here, go east to return to the previous room.");
@@ -244,7 +267,7 @@ public class Main {
 
     public static int parlor(String direction) {
         int room = 7;
-        roomCounter ++;
+        mapOfRooms.put("parlor",true);
 
         System.out.println("You entered Parlor room, there are lots Treasure Chest!!");
         System.out.println("Looking around there seems to be a few options, you can go to west or south. ");
@@ -270,7 +293,7 @@ public class Main {
 
     public static int secretRoom(String direction) {
         int room = 8;
-        roomCounter ++;
+        mapOfRooms.put("secretRoom",true);
 
         System.out.println("oh hey you stumbled upon the secret room! what!");
         System.out.println("You can only return to the previous room by typing west");
@@ -301,7 +324,7 @@ public class Main {
 
     public static void exit() {
         int random = chance(1, 100);
-
+        counter();
         System.out.println("You ran out of the creepy house with your tail " +
                 "between your legs what a loser lol");
         System.out.println("Total number of rooms you visisted: " + roomCounter);

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="443adef2-c272-4378-b669-c277952fb3cb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Zosk/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Zosk/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Zosk/extra.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Zosk/extra.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extra.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572269704734</updated>
-      <workItem from="1572269730218" duration="9687000" />
+      <workItem from="1572269730218" duration="15355000" />
     </task>
     <servers />
   </component>
