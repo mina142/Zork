@@ -118,16 +118,19 @@ public class extra {
             case "east":
                 room = 2;
                 break;
+
             case "north":
                 room = 5;
+                break;
+
             case "quit":
                 exit();
                 break;
+
             default:
                 System.out.println("girl you typed it wrong try again lol");
-        }
+            }
         return room;
-
     }
 
     public static int kitchen(String direction) {
@@ -140,34 +143,43 @@ public class extra {
             case "west":
                 room = 2;
                 break;
+
             case "north":
                 room = 7;
+                break;
+
             case "quit":
                 exit();
                 break;
+
             default:
                 System.out.println("girl you typed it wrong try again lol");
         }
         return room;
 
     }
+
     public static int diningRoom(String direction) {
         int room = 5;
         System.out.println("You entered Dining Room, its scary and there are lots of dust and empty boxes!!");
         System.out.println("Looking around there seems to be a few options, you can go to south. ");
         direction = keyboard.next();
-        switch (direction) {
-            case "south":
-                room = 3;
-                break;
-            case "quit":
-                exit();
-                break;
-            default:
-                System.out.println("girl you typed it wrong try again lol");
-        }
+            switch (direction) {
+                case "south":
+                    room = 3;
+                    break;
+
+                case "quit":
+                    exit();
+                    break;
+
+                default:
+                    System.out.println("girl you typed it wrong try again lol");
+            }
         return room;
         }
+
+
     public static int parlor(String direction) {
         int room = 7;
         System.out.println("You entered Parlor room, there are lots Treasure Chest!!");
@@ -177,12 +189,15 @@ public class extra {
             case "south":
                 room = 4;
                 break;
+
             case "west":
                 room = 6;
                 break;
+
             case "quit":
                 exit();
                 break;
+
             default:
                 System.out.println("girl you typed it wrong try again lol");
         }
