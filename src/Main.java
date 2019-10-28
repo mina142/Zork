@@ -1,49 +1,105 @@
 import java.util.Random;
 import java.util.Scanner;
 
+import static javafx.application.Platform.exit;
+
+
 public class Main {
+    public static int roomCounter = 0;
+    public static Scanner keyboard = new Scanner(System.in);
+    public static Random r = new Random();
+
+
     public static void main(String[] args) {
-
-        String n,w,e,s;
-        int roomCounter = 0;
-        Scanner keyboard = new Scanner(System.in);
-        Random r = new Random();
-        //int x = 1 + r.nextInt(6);
-        String direction;
-        System.out.println("You are encountered a creepy haunted house," +
-                "type Enter to continue or you may choose to quit at any time by typing Quit!");
-        String choice = keyboard.next();
-        if(choice.equalsIgnoreCase("Enter")){
-
+        process();
 
 
 
     }
-        else if (choice.equalsIgnoreCase("Quit")){
 
-        }
+    public static void process(){
+        String answer;
+        String direction = "quit";
+        int room = 1;
 
-
-    public int foyer(int x){
-            System.out.println("You entered Foyer room which is full of dead scorpions, Type North " +
-                    "to go to next room!");
-            String choice1 = keyboard.next();
-            if (choice1.equalsIgnoreCase("north")) {
-                //method FrontRoom
-                roomCounter++;
-                return roomCounter;
-            } else {
-                //quit
+        do {
+            switch (room) {
+                case 1:
+                    room = foyer(direction);
+                    break;
+                case 2:
+                    room = frontRoom(direction);
+                    break;
+//                case 3:
+//                    room = library(direction);
+//                    break;
+//                case 4:
+//                    room = kitchen(direction);
+//                    break;
+//                case 5:
+//                    room = diningRoom(direction);
+//                    break;
+//                case 6:
+//                    room = vault(direction);
+//                    break;
+//                case 7:
+//                    room = parlor(direction);
+//                    break;
+//                case 8:
+//                    room = secretRoom(direction);
+//                    break;
             }
-
-
-        }
-
+            System.out.println("type y to go to confirm");
+            answer = keyboard.next();
+        } while (answer.equalsIgnoreCase("y"));
     }
-public String frontRoom(){
-    System.out.println("You entered Front Room,where there is a piano, you can choose south, west, and east!");
-    String choice2 = keyboard.next();
-    if(choice2.equalsIgnoreCase("west")){
 
-}
+    // case 1
+    public static int foyer(String direction){
+        int room = 1;
+
+        System.out.println("You entered Foyer room which is full of dead scorpions, Type North " +
+                "to go to next room!");
+        direction = keyboard.next();
+
+        switch (direction) {
+            case "north":
+                room = 2;
+                break;
+
+            case "quit":
+                exit();
+                break;
+
+            default:
+                System.out.println("girl you typed it wrong try again lol");
+        } return room;
+    }
+
+
+    public static int frontRoom(String direction){
+        int room = 2;
+
+        System.out.println("you're in room two now!");
+        direction = keyboard.next();
+
+        switch (direction) {
+            case "south":
+                room = 1;
+                break;
+
+            case "west":
+                room = 3;
+                break;
+
+            case "east":
+                room = 4;
+                break;
+
+            case "quit":
+                exit();
+                break;
+        } return room;
+    }
+
 }
