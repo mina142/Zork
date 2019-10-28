@@ -84,7 +84,8 @@ public class Main {
         mapOfRooms.put("foyer",true);
 
         System.out.println("You entered the Foyer, looking around you see a dead scorpion (ew gross)");
-        System.out.println("There is a door ahead, type north to proceed.");
+        System.out.println("There is a door ahead, type north to proceed" +
+                "or you can be a pansy and type quit at any time to leave.");
         direction = keyboard.next();
 
         switch (direction) {
@@ -109,8 +110,8 @@ public class Main {
 
 
         System.out.println("You've entered the front room, its big or whatever and there is a piano! cool!");
-        System.out.println("Looking around there seems to be a few options, you can either east, west, " +
-                "or return to the previous room via south.");
+        System.out.println("Looking around there seems to be a few options, you can either go east, west, " +
+                "or return to the previous room by typing south.");
         direction = keyboard.next();
 
         switch (direction) {
@@ -196,7 +197,7 @@ public class Main {
         mapOfRooms.put("diningRoom",true);
 
         System.out.println("You entered Dining Room, its scary and there are lots of dust and empty boxes!!");
-        System.out.println("Looking around there seems to be a few options, you can go to south. ");
+        System.out.println("Looking around there seems to be only one option, you can go to south. ");
         direction = keyboard.next();
         switch (direction) {
             case "south":
@@ -269,7 +270,7 @@ public class Main {
         int room = 7;
         mapOfRooms.put("parlor",true);
 
-        System.out.println("You entered Parlor room, there are lots Treasure Chest!!");
+        System.out.println("You entered Parlor room, there is a Treasure Chest!!");
         System.out.println("Looking around there seems to be a few options, you can go to west or south. ");
         direction = keyboard.next();
         switch (direction) {
@@ -295,7 +296,7 @@ public class Main {
         int room = 8;
         mapOfRooms.put("secretRoom",true);
 
-        System.out.println("oh hey you stumbled upon the secret room! what!");
+        System.out.println("oh hey you stumbled upon the secret room! what! there are piles of gold!");
         System.out.println("You can only return to the previous room by typing west");
         direction = keyboard.next();
 
