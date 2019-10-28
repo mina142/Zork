@@ -54,7 +54,7 @@ public class Main {
             }
             System.out.println("Are you sure? (Y/N) ");
             answer = keyboard.next();
-        } while (answer.equalsIgnoreCase("y"));
+        } while (answer.equalsIgnoreCase("y") || (answer.equalsIgnoreCase("yes")));
     }
 
     // case 1
