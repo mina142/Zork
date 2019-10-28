@@ -49,7 +49,7 @@ public class Main {
 //                    room = secretRoom(direction);
 //                    break;
             }
-            System.out.println("type y to go to confirm");
+            System.out.println("Would you like to go to another room? (Y/N");
             answer = keyboard.next();
         } while (answer.equalsIgnoreCase("y"));
     }
@@ -58,8 +58,8 @@ public class Main {
     public static int foyer(String direction){
         int room = 1;
 
-        System.out.println("You entered Foyer room which is full of dead scorpions, Type North " +
-                "to go to next room!");
+        System.out.println("You entered the Foyer, looking around you see a dead scorpion (ew gross)");
+        System.out.println("There is a door ahead, type north to proceed.");
         direction = keyboard.next();
 
         switch (direction) {
@@ -80,7 +80,9 @@ public class Main {
     public static int frontRoom(String direction){
         int room = 2;
 
-        System.out.println("you're in room two now!");
+        System.out.println("You've entered the front room, its big or whatever and there is a piano! cool!");
+        System.out.println("Looking around there seems to be a few options, you can either east, west, " +
+                "or return to the previous room via south.");
         direction = keyboard.next();
 
         switch (direction) {
@@ -99,6 +101,9 @@ public class Main {
             case "quit":
                 exit();
                 break;
+
+            default:
+                System.out.println("girl you typed it wrong try again lol");
         } return room;
     }
 
